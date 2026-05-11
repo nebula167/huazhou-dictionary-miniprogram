@@ -1,0 +1,183 @@
+page {
+  background-color: #fafafa; /* 极淡的灰白底色 */
+}
+.container {
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* 标题整体容器，让五个小方块横向居中排列 */
+.header-group {
+  display: flex;
+  justify-content: center; /* 整体居中 */
+  gap: 24rpx;              /* 每个字之间的间距，你可以根据喜好调大调小 */
+  margin-top: 160rpx;
+  margin-bottom: 60rpx;    /* 距离下面搜索框的距离 */
+}
+/* 每个单字的小方块，让拼音和汉字上下排列并居中 */
+.char-block {
+  display: flex;
+  flex-direction: column; /* 上下排布 */
+  align-items: center;    /* 拼音和汉字绝对居中对齐 */
+}
+
+/* 拼音样式 */
+.spell {
+  font-size: 28rpx;       /* 拼音大小 */
+  color: #333333;
+  margin-bottom: 8rpx;    /* 拼音和下面汉字的间距 */
+}
+
+/* 汉字样式 */
+.title {
+  font-size: 56rpx;       /* 汉字大小 */
+  font-weight: bold;
+  color: #000000;
+  /* 注意：这里不需要再写 margin-bottom 或者居中了，交给了外层的 char-block 控制 */
+}
+.search-box {
+  display: flex;
+  align-items: center; /* 确保输入框和按钮绝对垂直居中 */
+  width: 85%;          /* 整体宽度稍微收窄一点，留出呼吸感 */
+  margin: 0 auto;      /* 整体居中 */
+}
+.input {
+  flex: 1;             /* 让输入框自动占满左侧剩余空间 */
+  height: 88rpx;
+  background-color: #f5f6f8; /* 加一点非常淡的灰底色，更有质感 */
+  border: 2rpx solid transparent; /* 去掉原本生硬的边框 */
+  border-radius: 44rpx; /* 大圆角，变成胶囊形状 */
+  padding: 0 40rpx;
+  font-size: 32rpx;
+  margin-right: 24rpx; /* 和按钮拉开一点距离 */
+}
+.btn {
+  width: 180rpx !important; /* 强制覆盖微信默认的按钮宽度，让它变精致 */
+  height: 88rpx;
+  line-height: 88rpx;
+  padding: 0;
+  background-color: #07c160; /* 微信经典绿，或者你可以换成你喜欢的品牌色 */
+  color: #ffffff;
+  font-size: 32rpx;
+  font-weight: 500;
+  border-radius: 44rpx; /* 和输入框呼应的圆角 */
+  box-shadow: 0 8rpx 16rpx rgba(7, 193, 96, 0.25); /* 增加一点轻微的阴影，让按钮“浮”起来 */
+  transition: all 0.2s; /* 让点击时的变化更平滑 */
+}
+
+/* 按钮按下去的交互反馈 */
+.btn-hover {
+  transform: scale(0.96); /* 点击时微微缩小，手感更好 */
+  opacity: 0.9;
+}
+/* 新的卡片样式 */
+.result-card {
+  width: 85%;
+  margin: 60rpx auto 0;
+  background-color: #ffffff;
+  border-radius: 32rpx;
+  box-shadow: 0 12rpx 40rpx rgba(0, 0, 0, 0.05); /* 非常柔和的阴影 */
+  padding: 50rpx 40rpx;
+  box-sizing: border-box;
+}
+
+/* 顶部大字 */
+.main-char-box {
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.main-char {
+  font-size: 120rpx; /* 超级大字，极具视觉冲击力 */
+  font-weight: bold;
+  color: #333333;
+}
+
+/* 淡灰色分割线 */
+.divider {
+  width: 100%;
+  height: 2rpx;
+  background-color: #f0f0f0;
+  margin-bottom: 30rpx;
+}
+
+/* 列表项布局 */
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 居中对齐 */
+  padding: 30rpx 0;    /* 稍微加大一点上下间距，因为右边变两行了 */
+  border-bottom: 2rpx dashed #f0f0f0; 
+}
+.result-item:last-child {
+  border-bottom: none; /* 最后一个去掉底边框 */
+}
+
+/* 左侧繁体字区域 */
+.char-section {
+  display: flex;
+  align-items: baseline;
+}
+/* 右侧拼音区域（竖向排列） */
+.pinyin-section {
+  display: flex;
+  flex-direction: column; 
+  /* 删掉之前的 align-items: flex-end; */
+  gap: 12rpx;             
+}
+
+/* 每行拼音的布局 */
+.info-group {
+  display: flex;
+  align-items: baseline;
+}
+/* 统一标签宽度，让它们像表格的第一列 */
+.label {
+  width: 110rpx;        /* 宽度从 90 调宽到 110，给大字留出空间 */
+  text-align: right;    
+  font-size: 35rpx;     /* 字体从 24 调大到 28（或者你也可以试试 30rpx） */
+  color: #888888;       /* 颜色稍微加深了一点点，提升辨识度 */
+  margin-right: 20rpx;  
+}
+.trad-char {
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: 500;
+}
+/* 统一拼音宽度，像表格的第二列 */
+.pinyin-text {
+  width: 140rpx;        /* 给一个足够装下最长拼音的宽度 */
+  text-align: left;     /* 拼音统一靠左对齐 */
+  font-size: 40rpx; 
+  font-weight: bold;
+}
+/* 用两种不同颜色区分上下江 */
+.shang-color {
+  color: #06ad56; 
+}
+.xia-color {
+  color: #1890ff; 
+}
+/* 底部科普说明区域 */
+.note-box {
+  margin-top: 40rpx;         /* 和上面的拼音拉开一点距离 */
+  padding-top: 30rpx;        /* 内部顶部的留白 */
+  border-top: 2rpx solid #f5f5f5; /* 加一条极淡的分割线，显得有层次 */
+}
+
+/* 底部说明文字 */
+.note-text {
+  font-size: 22rpx;          /* 采用小字号 */
+  color: #b2b2b2;            /* 浅灰色，作为辅助信息不抢视觉焦点 */
+  line-height: 1.6;          /* 增加行高，让这段话读起来不拥挤 */
+  display: block;            /* 保证文字能正常换行 */
+  text-align: justify;       /* 两端对齐，排版更整齐 */
+}
+.error-box {
+  text-align: center;
+  padding: 40rpx 0;
+}
+.error-text {
+  color: #ff4d4f;
+  font-size: 30rpx;
+}

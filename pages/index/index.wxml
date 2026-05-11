@@ -1,0 +1,73 @@
+<view class="container">
+  <view class="header-group">
+    <view class="char-block">
+      <text class="spell">faa1</text>
+      <text class="title">化</text>
+    </view>
+    <view class="char-block">
+      <text class="spell">zau1</text>
+      <text class="title">州</text>
+    </view>
+    <view class="char-block">
+      <text class="spell">waa6</text>
+      <text class="title">话</text>
+    </view>
+    <view class="char-block">
+      <text class="spell">tei6</text>
+      <text class="title">字</text>
+    </view>
+    <view class="char-block">
+      <text class="spell">ddin2</text>
+      <text class="title">典</text>
+    </view>
+  </view>
+  
+  <view class="search-box">
+    <input 
+      class="input" 
+      placeholder="请输入要查询的单字" 
+      bindinput="onInput" 
+      confirm-type="search" 
+      bindconfirm="onSearch"
+      maxlength="100" 
+      value="{{inputValue}}"
+    />
+    <button class="btn" hover-class="btn-hover" bindtap="onSearch">查询</button>
+  </view>
+
+  <view class="result-card" wx:if="{{hasSearched}}">
+    <view class="main-char-box">
+      <text class="main-char">{{targetChar}}</text>
+    </view>
+    
+    <view class="divider"></view>
+    
+    <block wx:if="{{results.length > 0}}">
+      <view class="result-item" wx:for="{{results}}" wx:key="char">
+        <view class="char-section">
+          <text class="label">繁体</text>
+          <text class="trad-char">{{item.char}}</text>
+        </view>
+        
+        <view class="pinyin-section">
+          <view class="info-group">
+            <text class="label">上江音</text>
+            <text class="pinyin-text shang-color">{{item.shangPinyin}}</text>
+          </view>
+          <view class="info-group">
+            <text class="label">下江音</text>
+            <text class="pinyin-text xia-color">{{item.xiaPinyin}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+    
+    <view class="note-box" wx:if="{{results.length > 0}}">
+      <text class="note-text">注：下江音主要分布在杨梅镇、同庆镇和长岐镇及其附近，上江话主要分布在化州其他镇街。</text>
+    </view>
+
+    <view class="error-box" wx:else>
+      <text class="error-text">词库中暂无该字的方言拼音</text>
+    </view>
+  </view>
+</view>
