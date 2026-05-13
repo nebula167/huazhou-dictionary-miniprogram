@@ -63,7 +63,7 @@ User inputs a character (Simplified or Traditional)
 - WeChat Mini Program native framework (glass-easel)
 - Base library 3.15.0+
 - Fully client-side, no cloud dependencies
-- Romanization follows Huazhou dialect pinyin conventions
+- Guangzhou pronunciations use LSHK Jyutping; Shangjiang/Xiajiang use Huazhou dialect romanization
 
 ---
 
