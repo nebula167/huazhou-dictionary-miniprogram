@@ -35,7 +35,8 @@ Page({
       if (dictEntry) {
         finalResults.push({
           char: tradChar,
-          shangPinyin: dictEntry.shang || '暂无', // 如果没有录入，显示暂无
+          guangPinyin: dictEntry.guang || '暂无',
+          shangPinyin: dictEntry.shang || '暂无',
           xiaPinyin: dictEntry.xia || '暂无'
         });
       }

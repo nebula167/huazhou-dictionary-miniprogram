@@ -10,15 +10,16 @@ A WeChat Mini Program for looking up character pronunciations in the Huazhou dia
 
 - Supports both **Simplified** and **Traditional** Chinese characters
 - Automatic **Simplified-to-Traditional** conversion, handling one-to-many mappings
-- Displays both **Shangjiang** (上江) and **Xiajiang** (下江) pronunciations
+- Displays **Guangzhou** (Cantonese), **Shangjiang** (上江), and **Xiajiang** (下江) pronunciations
 - Fully offline — no network required
 
 ## About the Pronunciations
 
-Huazhou dialect has two regional variations:
+Three pronunciation systems are provided:
 
-| System | Region | Display Color |
-|--------|--------|---------------|
+| System | Description | Display Color |
+|--------|-------------|---------------|
+| **Guangzhou** (广州音) | Standard Cantonese (LSHK Jyutping) | <span style="color:#e67e22">■ Orange</span> |
 | **Shangjiang** (上江音) | Most towns and streets in Huazhou | <span style="color:#06ad56">■ Green</span> |
 | **Xiajiang** (下江音) | Yangmei, Tongqing, Changqi towns | <span style="color:#1890ff">■ Blue</span> |
 
@@ -34,20 +35,17 @@ User inputs a character (Simplified or Traditional)
   dict_data.js         ← Look up pronunciation in dialect dictionary
        │
        ▼
-  Display: Traditional character + Shangjiang + Xiajiang pinyin
+  Display: Traditional character + Guangzhou + Shangjiang + Xiajiang pinyin
 ```
 
 ## Project Structure
 
 ```
 ├── data/
-│   ├── dict_data.js       # Dialect dictionary (~3,400 entries)
-│   └── s2t_dict.js        # Simplified-to-Traditional map (~9,000 mappings)
+│   ├── dict_data.js       # Dialect dictionary (4,310 entries)
+│   └── s2t_dict.js        # Simplified-to-Traditional map (~4,000 mappings)
 ├── pages/
-│   ├── index/             # Main page — dictionary search
-│   └── logs/              # Logs page — usage history
-├── utils/
-│   └── util.js            # Date formatting utility
+│   └── index/             # Main page — dictionary search
 ├── app.js / app.json / app.wxss
 ├── project.config.json
 └── sitemap.json

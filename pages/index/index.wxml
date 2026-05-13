@@ -58,6 +58,10 @@
             <text class="label">下江音</text>
             <text class="pinyin-text xia-color">{{item.xiaPinyin}}</text>
           </view>
+          <view class="info-group">
+            <text class="label">广州音</text>
+            <text class="pinyin-text guang-color">{{item.guangPinyin}}</text>
+          </view>
         </view>
       </view>
     </block>

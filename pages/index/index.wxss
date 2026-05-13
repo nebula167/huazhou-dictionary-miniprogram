@@ -151,12 +151,15 @@ page {
   font-size: 40rpx; 
   font-weight: bold;
 }
-/* 用两种不同颜色区分上下江 */
+/* 用三种不同颜色区分广州音、上江、下江 */
+.guang-color {
+  color: #e67e22;
+}
 .shang-color {
-  color: #06ad56; 
+  color: #06ad56;
 }
 .xia-color {
-  color: #1890ff; 
+  color: #1890ff;
 }
 /* 底部科普说明区域 */
 .note-box {
