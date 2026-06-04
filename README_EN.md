@@ -10,7 +10,7 @@ A WeChat Mini Program for looking up character pronunciations in the Huazhou dia
 
 Search **"化州话字典"** on WeChat Mini Program.
 
-![Screenshot](IMG_0748.PNG)
+<img src="IMG_0748.PNG" width="300" alt="Screenshot">
 
 ## Features
 
