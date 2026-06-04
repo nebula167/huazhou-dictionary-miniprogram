@@ -6,6 +6,12 @@
 
 ---
 
+## 使用
+
+微信小程序搜索 **"化州话字典"** 即可使用。
+
+![截图](IMG_0748.PNG)
+
 ## 功能
 
 - 支持**简体字**和**繁体字**输入
@@ -51,19 +57,16 @@
 └── sitemap.json
 ```
 
-## 运行
-
-1. 下载[微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-2. 导入项目目录
-3. AppID 使用 `wxbc0a13dca2f0a7ca` 或替换为自己的
-4. 点击编译预览
-
 ## 技术栈
 
 - 微信小程序原生框架 (glass-easel)
 - 基础库 3.15.0+
 - 纯客户端，无云开发依赖
 - 广州音采用香港语言学学会粤语拼音方案（Jyutping），上江/下江采用化州话罗马化拼写
+
+## 相关链接
+
+- 代码仓库：[github.com/nebula167/huazhou-dictionary-miniprogram](https://github.com/nebula167/huazhou-dictionary-miniprogram)
 
 ---
 

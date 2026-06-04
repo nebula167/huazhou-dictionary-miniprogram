@@ -6,6 +6,12 @@ A WeChat Mini Program for looking up character pronunciations in the Huazhou dia
 
 ---
 
+## How to Use
+
+Search **"化州话字典"** on WeChat Mini Program.
+
+![Screenshot](IMG_0748.PNG)
+
 ## Features
 
 - Supports both **Simplified** and **Traditional** Chinese characters
@@ -51,19 +57,16 @@ User inputs a character (Simplified or Traditional)
 └── sitemap.json
 ```
 
-## Getting Started
-
-1. Download [WeChat DevTools](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-2. Import the project directory
-3. Use AppID `wxbc0a13dca2f0a7ca` or replace with your own
-4. Compile and preview
-
 ## Tech Stack
 
 - WeChat Mini Program native framework (glass-easel)
 - Base library 3.15.0+
 - Fully client-side, no cloud dependencies
 - Guangzhou pronunciations use LSHK Jyutping; Shangjiang/Xiajiang use Huazhou dialect romanization
+
+## Links
+
+- Repository: [github.com/nebula167/huazhou-dictionary-miniprogram](https://github.com/nebula167/huazhou-dictionary-miniprogram)
 
 ---
 
