@@ -74,7 +74,7 @@ flowchart TD
 
 ## 相关链接
 
-- 代码仓库：[github.com/nebula167/huazhou-dictionary-miniprogram](https://github.com/nebula167/huazhou-dictionary-miniprogram)
+- 代码仓库：[github.com/ZedingZhang/huazhou-dictionary-miniprogram](https://github.com/ZedingZhang/huazhou-dictionary-miniprogram)
 
 ---
 
