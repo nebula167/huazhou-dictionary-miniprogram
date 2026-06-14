@@ -1,6 +1,7 @@
 # 化州话字典
 
 微信小程序，查询化州方言（粤语分支）的汉字读音。
+这是全国第一个查询化州话拼音字典产品。
 
 [English Version →](README_EN.md)
 
@@ -29,19 +30,26 @@
 | **上江音** | 化州大部分镇街 | <span style="color:#06ad56">■ 绿色</span> |
 | **下江音** | 杨梅镇、同庆镇、长岐镇及其附近 | <span style="color:#1890ff">■ 蓝色</span> |
 
-## 查找流程
+## Architecture
 
-```
-用户输入汉字（简体或繁体）
-       │
-       ▼
-  s2t_dict.js          ← 简繁转换，获取繁体字数组
-       │
-       ▼
-  dict_data.js         ← 在方言字典中查找拼音
-       │
-       ▼
-  显示：繁体字 + 广州音 + 上江音 + 下江音
+```mermaid
+flowchart TD
+  user["用户输入汉字<br/>简体或繁体"]
+
+  subgraph mini["微信小程序客户端（完全离线）"]
+    app["app.js / app.json / app.wxss<br/>应用配置与全局样式"]
+    page["pages/index<br/>主页搜索与结果渲染"]
+    s2t["data/s2t_dict.js<br/>简繁转换，获取繁体字数组"]
+    dict["data/dict_data.js<br/>查询广州音、上江音、下江音"]
+    output["显示结果<br/>繁体字 + 广州音 + 上江音 + 下江音"]
+  end
+
+  user --> page
+  app --> page
+  page --> s2t
+  s2t --> dict
+  dict --> output
+  output --> page
 ```
 
 ## 项目结构
@@ -62,7 +70,7 @@
 - 微信小程序原生框架 (glass-easel)
 - 基础库 3.15.0+
 - 纯客户端，无云开发依赖
-- 广州音采用香港语言学学会粤语拼音方案（Jyutping），上江/下江采用化州话罗马化拼写
+- 拼音方案基于香港语言学学会粤语拼音方案（Jyutping）
 
 ## 相关链接
 

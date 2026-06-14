@@ -1,6 +1,7 @@
 # Huazhou Dialect Dictionary
 
 A WeChat Mini Program for looking up character pronunciations in the Huazhou dialect (a branch of Cantonese / Yue Chinese).
+This is the first dictionary product in China dedicated to Huazhou dialect pronunciation lookup.
 
 [← 中文版](README.md)
 
@@ -29,19 +30,26 @@ Three pronunciation systems are provided:
 | **Shangjiang** (上江音) | Most towns and streets in Huazhou | <span style="color:#06ad56">■ Green</span> |
 | **Xiajiang** (下江音) | Yangmei, Tongqing, Changqi towns | <span style="color:#1890ff">■ Blue</span> |
 
-## How It Works
+## Architecture
 
-```
-User inputs a character (Simplified or Traditional)
-       │
-       ▼
-  s2t_dict.js          ← Convert to Traditional form(s)
-       │
-       ▼
-  dict_data.js         ← Look up pronunciation in dialect dictionary
-       │
-       ▼
-  Display: Traditional character + Guangzhou + Shangjiang + Xiajiang pinyin
+```mermaid
+flowchart TD
+  user["User inputs a character<br/>Simplified or Traditional"]
+
+  subgraph mini["WeChat Mini Program client (fully offline)"]
+    app["app.js / app.json / app.wxss<br/>App config and global styles"]
+    page["pages/index<br/>Search UI and result rendering"]
+    s2t["data/s2t_dict.js<br/>Simplified-to-Traditional conversion"]
+    dict["data/dict_data.js<br/>Guangzhou, Shangjiang, and Xiajiang pronunciations"]
+    output["Result<br/>Traditional character + Guangzhou + Shangjiang + Xiajiang pinyin"]
+  end
+
+  user --> page
+  app --> page
+  page --> s2t
+  s2t --> dict
+  dict --> output
+  output --> page
 ```
 
 ## Project Structure
@@ -62,7 +70,7 @@ User inputs a character (Simplified or Traditional)
 - WeChat Mini Program native framework (glass-easel)
 - Base library 3.15.0+
 - Fully client-side, no cloud dependencies
-- Guangzhou pronunciations use LSHK Jyutping; Shangjiang/Xiajiang use Huazhou dialect romanization
+- The pronunciation system is based on the LSHK Jyutping scheme
 
 ## Links
 
