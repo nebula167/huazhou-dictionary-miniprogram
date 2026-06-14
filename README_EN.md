@@ -26,9 +26,9 @@ Three pronunciation systems are provided:
 
 | System | Description | Display Color |
 |--------|-------------|---------------|
-| **Guangzhou** (广州音) | Standard Cantonese (LSHK Jyutping) | <span style="color:#e67e22">■ Orange</span> |
-| **Shangjiang** (上江音) | Most towns and streets in Huazhou | <span style="color:#06ad56">■ Green</span> |
-| **Xiajiang** (下江音) | Yangmei, Tongqing, Changqi towns | <span style="color:#1890ff">■ Blue</span> |
+| **Guangzhou** (广州音) | Standard Cantonese (LSHK Jyutping) | 🟧 Orange |
+| **Shangjiang** (上江音) | Most towns and streets in Huazhou | 🟩 Green |
+| **Xiajiang** (下江音) | Yangmei, Tongqing, Changqi towns | 🟦 Blue |
 
 ## Architecture
 
