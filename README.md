@@ -7,6 +7,22 @@
 
 ---
 
+## 30-second verification
+
+快速确认小程序入口和离线字典数据可加载：
+
+```bash
+git clone https://github.com/ZedingZhang/huazhou-dictionary-miniprogram.git
+cd huazhou-dictionary-miniprogram
+node -c app.js
+node -c pages/index/index.js
+node - <<'JS'
+const { dialectDict } = require("./data/dict_data.js");
+const { s2t } = require("./data/s2t_dict.js");
+console.log(`dialect=${Object.keys(dialectDict).length}, s2t=${Object.keys(s2t).length}`);
+JS
+```
+
 ## 使用
 
 微信小程序搜索 **"化州话字典"** 即可使用。
