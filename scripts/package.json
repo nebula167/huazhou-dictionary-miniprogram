@@ -1,0 +1,7 @@
+{
+  "name": "dict-pinyin-converter",
+  "private": true,
+  "dependencies": {
+    "pinyin-pro": "^3.26.0"
+  }
+}

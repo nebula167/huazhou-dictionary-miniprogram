@@ -35,6 +35,7 @@ Page({
       if (dictEntry) {
         finalResults.push({
           char: tradChar,
+          puPinyin: dictEntry.pu || '暂无',
           guangPinyin: dictEntry.guang || '暂无',
           shangPinyin: dictEntry.shang || '暂无',
           xiaPinyin: dictEntry.xia || '暂无'

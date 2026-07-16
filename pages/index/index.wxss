@@ -161,6 +161,9 @@ page {
 .xia-color {
   color: #1890ff;
 }
+.pu-color {
+  color: #8e44ad;
+}
 /* 底部科普说明区域 */
 .note-box {
   margin-top: 40rpx;         /* 和上面的拼音拉开一点距离 */

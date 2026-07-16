@@ -51,16 +51,20 @@
         
         <view class="pinyin-section">
           <view class="info-group">
+            <text class="label">普通话</text>
+            <text class="pinyin-text pu-color">{{item.puPinyin}}</text>
+          </view>
+          <view class="info-group">
+            <text class="label">广州音</text>
+            <text class="pinyin-text guang-color">{{item.guangPinyin}}</text>
+          </view>
+          <view class="info-group">
             <text class="label">上江音</text>
             <text class="pinyin-text shang-color">{{item.shangPinyin}}</text>
           </view>
           <view class="info-group">
             <text class="label">下江音</text>
             <text class="pinyin-text xia-color">{{item.xiaPinyin}}</text>
-          </view>
-          <view class="info-group">
-            <text class="label">广州音</text>
-            <text class="pinyin-text guang-color">{{item.guangPinyin}}</text>
           </view>
         </view>
       </view>
