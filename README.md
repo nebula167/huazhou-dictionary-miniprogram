@@ -51,7 +51,7 @@ JS
 flowchart TD
   user["用户输入汉字<br/>简体或繁体"]
 
-  subgraph mini["微信小程序客户端（完全离线）"]
+  subgraph mini["微信小程序客户端"]
     app["app.js / app.json / app.wxss<br/>应用配置与全局样式"]
     page["pages/index<br/>主页搜索与结果渲染"]
     s2t["data/s2t_dict.js<br/>简繁转换，获取繁体字数组"]
